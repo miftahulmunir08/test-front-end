@@ -29,7 +29,19 @@ Object.assign(swiperEl, {
 });
 swiperEl.initialize();
 
+$(window).on("scroll", function () {
+  $("section").each(function () {
+    var sectionTop = $(this).offset().top;
+    var scrollTop = $(window).scrollTop();
+    var windowHeight = $(window).height();
+
+    if (scrollTop + windowHeight > sectionTop + 100) {
+      $(this).addClass("visible");
+    }
+  });
+});
 $(document).ready(function () {
+  $("html, body").scrollTop(20);
   $(".navbar a").on("click", function (event) {
     // Pastikan ini adalah tautan ke section di halaman yang sama
     if (this.hash !== "") {

@@ -163,6 +163,21 @@ section.contact-section.p-1 {
   padding: 0 5% 0 5%;
 }
 
+#hero.fade-in-up {
+  animation: fadeInUp 1s forwards !important;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s, transform 0.6s;
+}
+
 .pr-20 {
   padding-right: 20%;
 }
@@ -272,20 +287,6 @@ section.contact-section.p-1 {
   font-weight: 900;
 }
 /* text-component */
-
-/* text size */
-/* .text-large {
-  font-size: 2.5em;
-}
-
-.text-medium {
-  font-size: 1.5em;
-}
-
-.text-small {
-  font-size: 1em;
-} */
-/* text size */
 
 /* color */
 .text-white-primary {
