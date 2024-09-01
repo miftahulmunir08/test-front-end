@@ -1,721 +1,722 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-  </head>
-  <body>
-    <!-- <h1>Responsive Flexbox</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+  <!-- <h1>Responsive Flexbox</h1>
     
     <p>The "flex-direction: row;" stacks the flex items horizontally (from left to right).</p>
     <p>The "flex-direction: column;" stacks the flex items vertically (from top to bottom).</p>
     <p><b>Resize the browser window to see that the direction changes when the 
     screen size is 800px wide or smaller.</b></p> -->
-    <section class="hero-section bg-navy flex-container p-1 m-0">
-      <div class="flex-item-left text-start">
-        <h3 class="small-title text-white-primary text-uppercase m-0">
-          Titanium Printing
-        </h3>
-        <h1 class="main-title">
-          <span class="text-green-primary">PRINT</span><br /><span
-            class="text-white-primary"
-            >SHOPS</span
-          >
-        </h1>
-        <p class="description text-white-primary w-200">
-          Lorem ipsum dolor sit amet, onsectetur<br />adipiscing elit. Donec
-          lurus
-        </p>
-        <a href="#" class="order-button br-1 w-200">
-          Order sekarang
-          <span class="icon br-1 br-rad"><i class="fa-solid fa-arrow-right"></i></span>
-        </a>
-      </div>
-      <div class="flex-item-right text-end">
-        <img src="images/asset/hero_img.webp" style="width: 75%" />
-      </div>
-    </section>
 
-    <section
-      class="product-section flex-container p-1 m-0"
-      style="position: relative"
-    >
-      <div class="flex-item-left text-start">
-        <h3 class="medium-title text-navy-primary text-uppercase m-0">
-          Apa Kebutuhan<br />Cetakmu?
-        </h3>
-      </div>
-      <div class="flex-item-right text-end">
-        <div class="flex-container">
-          <div class="flex-item-left-80 mt-5">
-            <p>
-              Mauris euismod metus quis erat auctor <br />pharetra. Vestibulum
-              facilisis magna in <br />lacus ultrices
-            </p>
-            <br />
-            <a href="" class="text-dark">lihat layanan lainya</a>
-          </div>
-          <div class="flex-item-right-20">
-            <img
-              src="images/asset/atit2.png"
-              style="position: absolute; top: 0; right: 0; width: 15%"
-            />
-          </div>
+  <nav class="navbar">
+    <div class="navbar-brand" style="flex-grow: 1">
+      <a href="#">Titanium</a>
+    </div>
+    <div class="navbar-links" id="navbar-links" style="flex-grow: 8">
+      <a href="#hero">Home</a>
+      <a href="#different">About</a>
+      <a href="#layanan">Services</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="navbar-links navbar-menu" id="navbar-links">
+      <a href="#">Menu</a>
+    </div>
+    <div class="navbar-toggle" id="navbar-toggle">
+      <span>&#9776;</span>
+    </div>
+  </nav>
+  <div style="padding: 10px 5%;background-color: #082742;">
+    <hr class="navbar-divider">
+  </div>
+
+
+  <section class="hero-section bg-navy flex-container p-1 m-0" id="hero">
+    <div class="flex-item-left text-start">
+      <h3 class="small-title text-white-primary text-uppercase m-0">
+        Titanium Printing
+      </h3>
+      <h1 class="main-title">
+        <span class="text-green-primary">PRINT</span><br /><span class="text-white-primary">SHOPS</span>
+      </h1>
+      <p class="description text-white-primary w-200">
+        Lorem ipsum dolor sit amet, onsectetur<br />adipiscing elit. Donec
+        lurus
+      </p>
+      <a href="#" class="order-button br-1 w-200">
+        Order sekarang
+        <span class="icon br-1 br-rad"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+    <div class="flex-item-right text-end">
+      <img src="images/asset/hero_img.webp" style="width: 75%" />
+    </div>
+  </section>
+
+  <section class="product-section flex-container p-1 m-0" style="position: relative" id="product">
+    <div class="flex-item-left text-start">
+      <h3 class="medium-title text-navy-primary text-uppercase m-0">
+        Apa Kebutuhan<br />Cetakmu?
+      </h3>
+    </div>
+    <div class="flex-item-right text-end">
+      <div class="flex-container">
+        <div class="flex-item-left-80 mt-5">
+          <p>
+            Mauris euismod metus quis erat auctor <br />pharetra. Vestibulum
+            facilisis magna in <br />lacus ultrices
+          </p>
+          <br />
+          <a href="" class="text-dark">lihat layanan lainya</a>
+        </div>
+        <div class="flex-item-right-20">
+          <img src="images/asset/atit2.png" style="position: absolute; top: 0; right: 0; width: 15%" />
         </div>
       </div>
-      <!-- <img
+    </div>
+    <!-- <img
         src="images/asset/atit2.png"
         style="position: absolute; top: 0; right: 0; width: 15%"
       /> -->
-    </section>
+  </section>
 
-    <section class="product mySwiper">
-      <swiper-container
-        class="mySwiper"
-        loop="true"
-        centered-slides="false"
-        autoplay-delay="2000" autoplay-disable-on-interaction="false"
-      >
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-3.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
+  <section class="product mySwiper">
+    <swiper-container class="mySwiper" loop="true" centered-slides="false" autoplay-delay="2000"
+      autoplay-disable-on-interaction="false">
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-3.webp" alt="Book Image" class="text-center" />
           </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-1.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-2.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-3.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-2.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-1.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-        <swiper-slide class="portfolio-grid">
-          <div class="portfolio-card bg-blue-sea">
-            <div class="box text-center">
-              <img
-                src="images/asset/product-2.webp"
-                alt="Book Image"
-                class="text-center"
-              />
-            </div>
-            <h3 class="text-start">Cetak Kemasan</h3>
-            <p class="text-start small-title">
-              Mauris euismod metus quis erat auctor pharetra. Vestibulum
-              facilisis magna in lacus ultrices
-            </p>
-            <a href="#" class="text-green-primary small-title mt-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-        </swiper-slide>
-      </swiper-container>
-    </section>
-    <div class="h-250">&nbsp;</div>
-    
-    <section class="product-section" style="position: relative">
-      <div class="flex-container p-1 m-0">
-        <div class="flex-item-right-20">
-          <img
-            src="images/asset/atit2.png"
-            style="position: absolute; top: 0; left: 0; width: 15%"
-          />
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
         </div>
-        <div class="flex-item-left text-start">
-          <h3 class="medium-title text-navy-primary">
-            Anda butuh<br />inspirasi?
-          </h3>
-          <p>Lihat <a href="" class="w-800 text-dark">semua layanan</a> kami</p>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-1.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
         </div>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-2.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-3.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-2.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-1.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="portfolio-grid">
+        <div class="portfolio-card bg-blue-sea">
+          <div class="box text-center">
+            <img src="images/asset/product-2.webp" alt="Book Image" class="text-center" />
+          </div>
+          <h3 class="text-start">Cetak Kemasan</h3>
+          <p class="text-start small-title">
+            Mauris euismod metus quis erat auctor pharetra. Vestibulum
+            facilisis magna in lacus ultrices
+          </p>
+          <a href="#" class="text-green-primary small-title mt-2"><span class="icon"><i
+                class="fa-solid fa-arrow-down"></i></span>
+            Lihat produk sejenis</a>
+        </div>
+      </swiper-slide>
+    </swiper-container>
+  </section>
+  <div class="h-250">&nbsp;</div>
+
+  <section class="layanan-section" style="position: relative" id="layanan">
+    <div class="flex-container p-1 m-0">
+      <div class="flex-item-right-20">
+        <img src="images/asset/anium.png" style="position: absolute; top: 0; left: 0; width: 20%" />
       </div>
+      <div class="flex-item-left text-start">
+        <h3 class="medium-title text-navy-primary">
+          Anda butuh<br />inspirasi?
+        </h3>
+        <p>Lihat <a href="" class="w-800 text-dark">semua layanan</a> kami</p>
+      </div>
+    </div>
 
-     
-        <div class="portfolio-grid text-center">
-          <!-- Repeat this block for each card -->
-          <div class="portfolio-card bg-gray">
-            <img
-              src="images/asset/example-1.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-red">
-            <img
-              src="images/asset/example-2.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-blue-sea-2">
-            <img
-              src="images/asset/example-3.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-green">
-            <img
-              src="images/asset/example-4.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-pink">
-            <img
-              src="images/asset/example-5.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-yellow-2">
-            <img
-              src="images/asset/example-6.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-blue">
-            <img
-              src="images/asset/example-7.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <div class="portfolio-card bg-orange">
-            <img
-              src="images/asset/example-8.png"
-              alt="Book Image"
-              class="mt-5"
-            />
-            <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
-            <div class="categories text-white w-600 mt-1">
-              <span>kategori</span>
-              <span>kategori</span>
-              <span>kategori lain nya</span>
-              <span>kategori</span>
-              <span>kategori</span>
-            </div>
-            <a href="#" class="text-white small-title mt-2 mb-2"
-              ><span class="icon"><i class="fa-solid fa-arrow-down"></i></span>
-              Lihat produk sejenis</a
-            >
-          </div>
-          <!-- More portfolio-card divs -->
+
+    <div class="portfolio-grid text-center">
+      <!-- Repeat this block for each card -->
+      <div class="portfolio-card bg-gray">
+        <img src="images/asset/example-1.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
         </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-red">
+        <img src="images/asset/example-2.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-blue-sea-2">
+        <img src="images/asset/example-3.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-green">
+        <img src="images/asset/example-4.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-pink">
+        <img src="images/asset/example-5.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-yellow-2">
+        <img src="images/asset/example-6.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-blue">
+        <img src="images/asset/example-7.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <div class="portfolio-card bg-orange">
+        <img src="images/asset/example-8.png" alt="Book Image" class="mt-5" />
+        <h3 class="text-white mt-5">Portfolio Cetak <br />Satu Satunya</h3>
+        <div class="categories text-white w-600 mt-1">
+          <span>kategori</span>
+          <span>kategori</span>
+          <span>kategori lain nya</span>
+          <span>kategori</span>
+          <span>kategori</span>
+        </div>
+        <a href="#" class="text-white small-title mt-2 mb-2"><span class="icon"><i
+              class="fa-solid fa-arrow-down"></i></span>
+          Lihat produk sejenis</a>
+      </div>
+      <!-- More portfolio-card divs -->
+    </div>
 
 
-      <!-- <img
+    <!-- <img
       src="images/asset/atit2.png"
       style="position: absolute; top: 0; right: 0; width: 15%"
     /> -->
-    </section>
+  </section>
 
-    <section class="different-section" style="position: relative;">
-      <div class="flex-container p-1 m-0">
-        <div class="flex-item-right-20">
-          <img
-            src="images/asset/atit2.png"
-            style="position: absolute; top: 0; right: 0; width: 15%"
-          />
-        </div>
-        <div>
+  <section class="different-section" style="position: relative;" id="different">
+    <div class="flex-container p-1 m-0">
+      <div class="flex-item-right-20">
+        <img src="images/asset/atit2.png" style="position: absolute; top: 0; right: 0; width: 15%" />
       </div>
-    </section>
+      <div>
+      </div>
+  </section>
 
-    <div class="curved-divider bg-dark-blue" >
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-          <path
-              fill="#fff"
-              d="M0,96L120,128C240,160,480,224,720,229.3C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
-              transform="rotate(180 720 160)"
-          ></path>
-      </svg>
+  <div class="curved-divider bg-dark-blue">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+      <path fill="#fff"
+        d="M0,96L120,128C240,160,480,224,720,229.3C960,235,1200,181,1320,154.7L1440,128L1440,320L1320,320C1200,320,960,320,720,320C480,320,240,320,120,320L0,320Z"
+        transform="rotate(180 720 160)"></path>
+    </svg>
   </div>
-  
+
   <section class="different-section-2 bg-dark-blue">
     <div class="flex-container p-1 m-0">
       <div class="flex-item-left-20 text-white">
-        <h2 class="medium-title">APA YANG <br>MEMBEDAKAN KAMI?</h2>       
+        <h2 class="medium-title">APA YANG <br>MEMBEDAKAN KAMI?</h2>
       </div>
     </div>
-<div class="card-container">
-  <div class="card">
-    <div class="card-icon">
-      <i class="fa-solid fa-gift"></i>
-    </div>
-    <div class="card-content mt-2 mb-3">
-      <h3>Layanan cepat</h3>
-      <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper dictum tempus. Donec id sem magna.</p>
-    </div>
-    <div class="card-action">
-      <i class="fa-solid fa-arrow-right text-green-primary"></i>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">
-      <i class="fa-solid fa-gift"></i>
-    </div>
-    <div class="card-content mt-2 mb-3">
-      <h3>Layanan cepat</h3>
-      <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper dictum tempus. Donec id sem magna.</p>
-    </div>
-    <div class="card-action">
-      <i class="fa-solid fa-arrow-right text-green-primary"></i>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">
-      <i class="fa-solid fa-gift"></i>
-    </div>
-    <div class="card-content mt-2 mb-3">
-      <h3>Layanan cepat</h3>
-      <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper dictum tempus. Donec id sem magna.</p>
-    </div>
-    <div class="card-action">
-      <i class="fa-solid fa-arrow-right text-green-primary"></i>
-    </div>
-  </div>
-
-  <div class="card">
-    <div class="card-icon">
-      <i class="fa-solid fa-gift"></i>
-    </div>
-    <div class="card-content mt-2 mb-3">
-      <h3>Layanan cepat</h3>
-      <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper dictum tempus. Donec id sem magna.</p>
-    </div>
-    <div class="card-action">
-      <i class="fa-solid fa-arrow-right text-green-primary"></i>
-    </div>
-  </div>
-</div>
-
-<div class="text-center mt-4">
-<a href="#" class="order-button w-700 bg-dark-green pd-button-help">
-  Cara kami membantu Anda
-  <!-- <span class="arrow" style="background-color: #60aa3e;"><i class="fa-solid fa-arrow-right"></i></span> -->
-  <span class="icon br-rad bg-dark-green-2 ml-2"><i class="fa-solid fa-arrow-right"></i></span>
-</a>
-</div>
-
-<div class="h-100">&nbsp;</div>
-      <!-- Your content goes here -->
-      <section class="product-section" style="position: relative">
-        <div class="flex-container p-1 m-0">
-          <div class="flex-item-right-20">
-            <img
-              class="d-none"
-              src="images/asset/office.webp"
-              style="position: absolute; top: 50px; left: 2px; width: 25%;border-radius: 5%;"
-            />
-            <img
-              class="d-lg-none"
-              src="images/asset/office.webp"
-              style="position: relative;width: 100%;border-radius: 5%;"
-            />
-          </div>
-          <div class="flex-item-left text-start">
-            <h3 class="main-title-2 text-white text-uppercase">
-              Solusi Terbaik <br />Bisnis Anda
-            </h3>
-            <p class="text-white w-200 pr-20 mt-2">Ut porta in magna sed venenatis. Curabitur vitae dapibus velit, a ultrices purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate ligula ac egestas pretium. Quisque turpis ante, condimentum ut dui sit amet, malesuada pretium eros.</p>
-          </div>
+    <div class="card-container">
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-gift"></i>
         </div>
-        </section>
+        <div class="card-content mt-2 mb-3">
+          <h3>Layanan cepat</h3>
+          <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper
+            dictum tempus. Donec id sem magna.</p>
+        </div>
+        <div class="card-action">
+          <i class="fa-solid fa-arrow-right text-green-primary"></i>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <div class="card-content mt-2 mb-3">
+          <h3>Layanan cepat</h3>
+          <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper
+            dictum tempus. Donec id sem magna.</p>
+        </div>
+        <div class="card-action">
+          <i class="fa-solid fa-arrow-right text-green-primary"></i>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <div class="card-content mt-2 mb-3">
+          <h3>Layanan cepat</h3>
+          <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper
+            dictum tempus. Donec id sem magna.</p>
+        </div>
+        <div class="card-action">
+          <i class="fa-solid fa-arrow-right text-green-primary"></i>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-icon">
+          <i class="fa-solid fa-gift"></i>
+        </div>
+        <div class="card-content mt-2 mb-3">
+          <h3>Layanan cepat</h3>
+          <p class="mt-2">Nunc venenatis est ac odio tincidunt, id hendrerit nisi egestas. Suspendisse ullamcorper
+            dictum tempus. Donec id sem magna.</p>
+        </div>
+        <div class="card-action">
+          <i class="fa-solid fa-arrow-right text-green-primary"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <a href="#" class="order-button w-700 bg-dark-green pd-button-help">
+        Cara kami membantu Anda
+        <!-- <span class="arrow" style="background-color: #60aa3e;"><i class="fa-solid fa-arrow-right"></i></span> -->
+        <span class="icon br-rad bg-dark-green-2 ml-2"><i class="fa-solid fa-arrow-right"></i></span>
+      </a>
+    </div>
+
+    <div class="h-100">&nbsp;</div>
+    <!-- Your content goes here -->
+    <section class="product-section" style="position: relative">
+      <div class="flex-container p-1 m-0">
+        <div class="flex-item-right-20">
+          <img class="d-none" src="images/asset/office.webp"
+            style="position: absolute; top: 50px; left: 2px; width: 25%;border-radius: 5%;" />
+          <img class="d-lg-none" src="images/asset/office.webp"
+            style="position: relative;width: 100%;border-radius: 5%;" />
+        </div>
+        <div class="flex-item-left text-start">
+          <h3 class="main-title-2 text-white text-uppercase">
+            Solusi Terbaik <br />Bisnis Anda
+          </h3>
+          <p class="text-white w-200 pr-20 mt-2">Ut porta in magna sed venenatis. Curabitur vitae dapibus velit, a
+            ultrices purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vulputate ligula ac
+            egestas pretium. Quisque turpis ante, condimentum ut dui sit amet, malesuada pretium eros.</p>
+        </div>
+      </div>
+    </section>
   </section>
 
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
     <g transform="scale(-1, 1) translate(-1440, 0)">
-      <path fill="#0a2e46" d="M0,256L80,213.3C160,171,320,85,480,64C640,43,800,85,960,117.3C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
+      <path fill="#0a2e46"
+        d="M0,256L80,213.3C160,171,320,85,480,64C640,43,800,85,960,117.3C1120,149,1280,171,1360,181.3L1440,192L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z">
+      </path>
     </g>
   </svg>
-  
 
 
-
-
-
-
-
-<section
-  class="contact-section"
-  style="position: relative"
->
-<div class="flex-container m-0 p-1">
-  <div class="flex-item-left text-start">
-    <div class="flex-container">
-      <div class="flex-item-left">
-       &nbsp;
-      </div>
-        <div class="flex-item-left ">
-          <p>info@titanium.com</p>
-        </div>
-    </div>
-  </div>
-  <div class="flex-item-right text-end">
-    <div class="flex-container dua">
-      <div class="flex-item-left">
+  <section class="contact-section text-navy-primary" style="position: relative" id="contact">
+    <div class="flex-container m-0">
+      <div class="flex-item-left text-start">
         <div class="flex-container">
-          <div class="flex-item-right text-start">
-            <h2>Produk</h2>
-            <ul class="text-start">
-              <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Home</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cerita Kami</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Layanan Lain</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Hubungi Kami</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Packaging Khusus</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Kerjasama</li>
-            </ul>
+          <div class="flex-item-left">
+            &nbsp;
           </div>
-          <div class="flex-item-right text-start">
-            <h2>Servis</h2>
-            <ul class="text-start">
-              <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Cetak \Brosur</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak DTF</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Banner</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Leaflet</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-            </ul>
+          <div class="flex-item-left">
+            <p class="text-start">info@titanium.com</p>
+            <div class="parent-container">
+              <div class="card-container-medsos">
+                <div class="card-medsos">
+                  <i class="fab fa-twitter"></i>
+                </div>
+                <div class="card-medsos">
+                  <i class="fab fa-instagram"></i>
+                </div>
+                <div class="card-medsos">
+                  <i class="fab fa-facebook"></i>
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="flex-item-right text-start">
-            <h2>Info</h2>
-            <ul>
-              <li class="text-start small-title ">&nbsp;</li>
-              <li class="text-start small-title mt-1"><i class="fa-solid fa-arrow-right"></i> Syarat dan Ketentuan </li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Pengembalian</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> FAQ</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Eksplorasi</li>
-              <li>&nbsp;</li>
-            </ul>
+        </div>
+      </div>
+      <div class="flex-item-right text-end">
+        <div class="flex-container dua">
+          <div class="flex-item-left">
+            <div class="flex-container">
+              <div class="flex-item-right text-start">
+                <h2>Produk</h2>
+                <ul class="text-start">
+                  <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Home</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cerita Kami</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Layanan Lain</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Hubungi Kami</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Packaging Khusus</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Kerjasama</li>
+                </ul>
+              </div>
+              <div class="flex-item-right text-start">
+                <h2>Servis</h2>
+                <ul class="text-start">
+                  <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Cetak \Brosur</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak DTF</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Banner</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Leaflet</li>
+                  <li>&nbsp;</li>
+                  <li>&nbsp;</li>
+                </ul>
+              </div>
+              <div class="flex-item-right text-start">
+                <h2>Info</h2>
+                <ul>
+                  <li class="text-start small-title ">&nbsp;</li>
+                  <li class="text-start small-title mt-1"><i class="fa-solid fa-arrow-right"></i> Syarat dan Ketentuan
+                  </li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Pengembalian</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> FAQ</li>
+                  <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Eksplorasi</li>
+                  <li>&nbsp;</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-</section>
+  </section>
 
-
-<section
-  class="contact-section"
-  style="position: relative"
->
-<div class="flex-container m-0">
-  <div class="flex-item-left text-start">
+  <section class="form-section text-navy-primary" style="position: relative">
     <div class="flex-container">
-      <div class="flex-item-left">
-       &nbsp;
-      </div>
-        <div class="flex-item-left ">
-          <p>info@titanium.com</p>
-        </div>
-    </div>
-  </div>
-  <div class="flex-item-right text-end">
-    <div class="flex-container dua">
-      <div class="flex-item-left">
+      <div class="flex-item-left text-start">
         <div class="flex-container">
-          <div class="flex-item-right text-start">
-            <h2>Produk</h2>
-            <ul class="text-start">
-              <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Home</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cerita Kami</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Layanan Lain</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Hubungi Kami</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Packaging Khusus</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Kerjasama</li>
-            </ul>
+          <div class="flex-item-left">
+            <div class="flex-container">
+              <div class="flex-item-right text-start">
+                <p>Jl. Raya Kalirungkut No.1C,<br>Panjang Jiwo, Kec. Tenggilis<br>Mejoyo, Surabaya, Jawa<br>Timur 60299
+                </p>
+              </div>
+            </div>
           </div>
-          <div class="flex-item-right text-start">
-            <h2>Servis</h2>
-            <ul class="text-start">
-              <li class="text-start small-title "><i class="fa-solid fa-arrow-right"></i> Cetak \Brosur</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak DTF</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Banner</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Cetak Leaflet</li>
-              <li>&nbsp;</li>
-              <li>&nbsp;</li>
-            </ul>
+          <div class="flex-item-left ">
+            <h2>Berlangganan</h2>
+            <form class="styled-form mt-2">
+              <div class="input-group">
+                <input type="text" placeholder="Nama anda" class="form-input">
+              </div>
+              <div class="input-group">
+                <input type="email" placeholder="Alamat E-mail" class="form-input">
+                <button type="submit" class="submit-btn">
+                  <span>&#10132;</span> <!-- This is the right arrow (→) character -->
+                </button>
+              </div>
+            </form>
           </div>
-          <div class="flex-item-right text-start">
-            <h2>Info</h2>
-            <ul>
-              <li class="text-start small-title ">&nbsp;</li>
-              <li class="text-start small-title mt-1"><i class="fa-solid fa-arrow-right"></i> Syarat dan Ketentuan </li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Pengembalian</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> FAQ</li>
-              <li class="text-start small-title"><i class="fa-solid fa-arrow-right"></i> Eksplorasi</li>
-              <li>&nbsp;</li>
-            </ul>
+        </div>
+      </div>
+      <div class="flex-item-right text-end">
+        <div class="flex-container dua">
+          <div class="flex-item-left">
+            <div class="flex-container">
+              <div class="flex-item-right text-start">
+                <h2>Sertifikasi</h2>
+                <div class="card-container-sertifikasi mt-2">
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-globe"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-industry"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-bolt"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-plug"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-tint"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-recycle"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-tint"></i>
+                  </div>
+                  <div class="card-sertifikasi">
+                    <i class="fas fa-sun"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</div>
 
-</section>
+  </section>
 
 
+  <section class="footer-section" style="position: relative">
+    <div class="flex-container">
+      <div class="flex-item-left text-start text-navy-primary">
+        <div class="flex-container">
+          <div class="flex-item-left">
+            <div class="flex-container">
+              <div class="flex-item-right text-start">
+                <p>Privacy policy
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="flex-item-left ">
+            &nbsp;
+          </div>
+        </div>
+      </div>
+      <div class="flex-item-right text-end">
+        <div class="flex-container dua">
+          <div class="flex-item-left">
+            <div class="flex-container">
+              <div class="flex-item-right text-emd">
+                <p><i class="fas fa-copyright"></i>/2024/Titanium./All right reserved</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center">
+      <p><span class="w-200">Desain, development dan SEO by</span> <span class="w-500">Crooud Agency</span></p>
+    </div>
+
+  </section>
 
 
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
-    <script>
-      const swiperEl = document.querySelector("swiper-container");
-      Object.assign(swiperEl, {
-        breakpoints: {
-          320: {
-            slidesPerView: 1,
-            spaceBetween: 10,
-          },
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 10,
-          },
-          1024: {
-            slidesPerView: 4,
-            spaceBetween: 10,
-          },
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+  <script>
+    // JavaScript for toggling the navbar in mobile view
+    const navbarToggle = document.getElementById('navbar-toggle');
+    const navbarLinks = document.getElementById('navbar-links');
+
+    navbarToggle.addEventListener('click', () => {
+      navbarLinks.classList.toggle('active');
+    });
+
+    const swiperEl = document.querySelector("swiper-container");
+    Object.assign(swiperEl, {
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10,
         },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        768: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 10,
+        },
+      },
+    });
+    swiperEl.initialize();
+  </script>
+  <script>
+    $(document).ready(function () {
+      $('.navbar a').on('click', function (event) {
+        // Pastikan ini adalah tautan ke section di halaman yang sama
+        if (this.hash !== "") {
+          // Mencegah aksi default
+          event.preventDefault();
+
+          // Simpan hash
+          var hash = this.hash;
+
+          // Menggunakan jQuery untuk animasi scroll
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function () {
+            // Mengubah URL setelah animasi selesai
+            window.location.hash = hash;
+          });
+        }
       });
-      swiperEl.initialize();
-    </script>
+      const mySwiper = new Swiper('.mySwiper', {
+        loop: true,
+        centeredSlides: false, // Initial state
+        // Other Swiper options as needed
+      });
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Swiper
-  const mySwiper = new Swiper('.mySwiper', {
-    loop: true,
-    centeredSlides: false, // Initial state
-    // Other Swiper options as needed
-  });
+      // Listen to the 'slideChange' event to detect dragging
+      mySwiper.on('slideChangeTransitionStart', function () {
+        // Set centeredSlides to true
+        mySwiper.params.centeredSlides = true;
 
-  // Listen to the 'slideChange' event to detect dragging
-  mySwiper.on('slideChangeTransitionStart', function () {
-    // Set centeredSlides to true
-    mySwiper.params.centeredSlides = true;
+        // Re-initialize the Swiper to apply the changes
+        mySwiper.update();
+      });
+    });
+  </script>
+</body>
 
-    // Re-initialize the Swiper to apply the changes
-    mySwiper.update();
-  });
-});
-    </script>
-  </body>
 </html>

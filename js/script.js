@@ -1,86 +1,69 @@
-let searchBtn = document.querySelector('#search-btn');
-let searchBar = document.querySelector('.search-bar-container');
-let formBtn = document.querySelector('#login-btn');
-let loginForm = document.querySelector('.login-form-container');
-let formClose = document.querySelector('#form-close');
-let menu = document.querySelector('#menu-bar');
-let navbar = document.querySelector('.navbar');
-let videoBtn = document.querySelectorAll('.vid-btn');
+// JavaScript for toggling the navbar in mobile view
+const navbarToggle = document.getElementById("navbar-toggle");
+const navbarLinks = document.getElementById("navbar-links");
 
-window.onscroll = () =>{
-    searchBtn.classList.remove('fa-times');
-    searchBar.classList.remove('active');
-    menu.classList.remove('fa-times');
-    navbar.classList.remove('active');
-    loginForm.classList.remove('active');
-}
-
-menu.addEventListener('click', () =>{
-    menu.classList.toggle('fa-times');
-    navbar.classList.toggle('active');
+navbarToggle.addEventListener("click", () => {
+  navbarLinks.classList.toggle("active");
 });
 
-searchBtn.addEventListener('click', () =>{
-    searchBtn.classList.toggle('fa-times');
-    searchBar.classList.toggle('active');
-});
-
-formBtn.addEventListener('click', () =>{
-    loginForm.classList.add('active');
-});
-
-formClose.addEventListener('click', () =>{
-    loginForm.classList.remove('active');
-});
-
-videoBtn.forEach(btn =>{
-    btn.addEventListener('click', ()=>{
-        document.querySelector('.controls .active').classList.remove('active');
-        btn.classList.add('active');
-        let src = btn.getAttribute('data-src');
-        document.querySelector('#video-slider').src = src;
-    });
-});
-
-var swiper = new Swiper(".review-slider", {
-    spaceBetween: 20,
-    loop:true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
+const swiperEl = document.querySelector("swiper-container");
+Object.assign(swiperEl, {
+  breakpoints: {
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-    breakpoints: {
-        640: {
-          slidesPerView: 1,
-        },
-        768: {
-          slidesPerView: 2,
-        },
-        1024: {
-          slidesPerView: 3,
-        },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 10,
     },
+    768: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 10,
+    },
+  },
 });
+swiperEl.initialize();
 
-var swiper = new Swiper(".brand-slider", {
-    spaceBetween: 20,
-    loop:true,
-    autoplay: {
-        delay: 2500,
-        disableOnInteraction: false,
-    },
-    breakpoints: {
-        450: {
-          slidesPerView: 2,
+$(document).ready(function () {
+  $(".navbar a").on("click", function (event) {
+    // Pastikan ini adalah tautan ke section di halaman yang sama
+    if (this.hash !== "") {
+      // Mencegah aksi default
+      event.preventDefault();
+
+      // Simpan hash
+      var hash = this.hash;
+
+      // Menggunakan jQuery untuk animasi scroll
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top,
         },
-        768: {
-          slidesPerView: 3,
-        },
-        991: {
-          slidesPerView: 4,
-        },
-        1200: {
-          slidesPerView: 5,
-        },
-      },
+        800,
+        function () {
+          // Mengubah URL setelah animasi selesai
+          window.location.hash = hash;
+        }
+      );
+    }
+  });
+  const mySwiper = new Swiper(".mySwiper", {
+    loop: true,
+    centeredSlides: false, // Initial state
+    // Other Swiper options as needed
+  });
+
+  // Listen to the 'slideChange' event to detect dragging
+  mySwiper.on("slideChangeTransitionStart", function () {
+    // Set centeredSlides to true
+    mySwiper.params.centeredSlides = true;
+
+    // Re-initialize the Swiper to apply the changes
+    mySwiper.update();
+  });
 });

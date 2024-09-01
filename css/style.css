@@ -4,6 +4,89 @@
   font-family: "Inter", system-ui;
 }
 
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: #082742;
+  padding: 10px 5%;
+  color: white;
+  position: fixed; 
+  top: 0;
+  left: 0;
+  width: 100%; 
+  z-index: 1000; 
+  border-bottom: 1px solid #ffffff63;
+}
+
+.navbar-divider {
+  width: 100%; /* Sesuaikan lebar sesuai keinginan */
+  border-top: 1px solid rgba(223, 220, 220, 0.76); /* Garis putih */
+  border-bottom: 1px solid rgba(223, 220, 220, 0.76); /* Garis putih */
+}
+
+.navbar-brand {
+  flex-grow: 1;
+}
+
+.navbar-brand a {
+  color: white;
+  text-decoration: none;
+  font-size: 24px;
+}
+
+.navbar-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* Additional styling for navbar links */
+.navbar-links a {
+  color: white;
+  text-decoration: none;
+  padding: 10px;
+  transition: background-color 0.3s;
+}
+
+.navbar-links a:hover {
+  color: #5cb85c;
+  border-radius: 5px;
+}
+
+/* Use this class to push Menu to the right */
+.navbar-menu {
+  margin-left: auto; /* Push this element to the right */
+  flex-grow: 0; /* Prevent the Menu from growing */
+}
+
+.navbar-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    background-color: #082742;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 10px 0;
+  }
+
+  .navbar-links.active {
+    display: flex;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+}
 /* layout */
 .flex-container {
   display: flex;
@@ -12,7 +95,7 @@
 
 .flex-item-left {
   padding: 10px;
-  flex:40%;
+  flex: 40%;
 }
 
 .flex-item-left-40 {
@@ -53,14 +136,14 @@ section.contact-section ul li {
 }
 
 .text-center {
-  text-align: center;
+  text-align: center !important;
   margin: auto;
   /* width: 50%; */
   /* background-color: #0e2b45; */
 }
 
 .text-end {
-  text-align: end;
+  text-align: end !important;
   margin: auto;
 }
 /* layout */
@@ -299,6 +382,52 @@ section.contact-section.p-1 {
 
 /* button-component */
 
+/* form-component */
+.styled-form {
+  width: 300px;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-input {
+  flex-grow: 1;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 50px;
+  background-color: #d3d3d3;
+  font-size: 16px;
+  outline: none;
+}
+
+.submit-btn {
+  background-color: #0e3a4a;
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: -40px;
+  cursor: pointer;
+  outline: none;
+}
+
+.submit-btn span {
+  color: white;
+  font-size: 16px;
+}
+
+.submit-btn:hover {
+  background-color: #0c323e;
+}
+
+/* form-component */
+
 /* card-component */
 .portfolio-grid {
   display: grid;
@@ -422,6 +551,51 @@ section.contact-section.p-1 {
   transform: rotate(
     -45deg
   ); /* Rotate the arrow to mimic the arrow-up-right direction */
+}
+
+.card-container-sertifikasi {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  max-width: 1200px;
+}
+
+.card-sertifikasi {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
+  background-color: #f0f2e8;
+}
+
+.card-sertifikasi i {
+  font-size: 24px;
+  color: #0e3a4a; /* Adjust the color as needed */
+}
+
+.parent-container {
+  display: flex;
+  justify-content: start;
+  align-items: start;
+}
+
+.card-container-medsos {
+  display: inline-flex;
+  width: 50%;
+  font-weight: normal; /* Make text bold, if desired */
+  gap: 1px; /* Space between icon and text */
+}
+
+.card-medsos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  border-radius: 30px;
 }
 
 /* responsiveness */
